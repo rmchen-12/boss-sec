@@ -1,0 +1,48 @@
+{
+  "name": "boss-sec",
+  "productName": "boss-sec",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": ".electron-vite/main",
+  "scripts": {
+    "start": "electron-vite dev --outDir=.electron-vite",
+    "package": "npm run prebuild && electron-forge package",
+    "make": "npm run prebuild && electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx .",
+    "prebuild": "electron-vite build --outDir=.electron-vite",
+    "preview": "electron-vite preview --outDir=.electron-vite"
+  },
+  "keywords": [],
+  "author": {
+    "name": "chenruimin",
+    "email": "chenruimin@kanzhun.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0",
+    "@electron-forge/maker-deb": "^6.0.0",
+    "@electron-forge/maker-rpm": "^6.0.0",
+    "@electron-forge/maker-squirrel": "^6.0.0",
+    "@electron-forge/maker-zip": "^6.0.0",
+    "@electron-toolkit/tsconfig": "^1.0.1",
+    "@types/trusted-types": "^2.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "electron": "21.2.3",
+    "electron-vite": "^1.0.12",
+    "eslint": "^8.26.0",
+    "typescript": "^4.8.4",
+    "vite": "3.0.0-alpha.13",
+    "vite-plugin-node-polyfills": "^0.5.0",
+    "vite-plugin-node-stdlib-browser": "^0.1.1",
+    "vite-plugin-optimizer": "^1.4.2"
+  },
+  "dependencies": {
+    "builtin-modules": "^3.3.0",
+    "chat-bubble": "^1.5.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "vite-plugin-commonjs-externals": "^0.1.1"
+  }
+}

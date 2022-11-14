@@ -1,0 +1,15 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": ["src/renderer/**/*.ts", "types/**/*.d.ts", "src/preload/*.d.ts", "src/platform/**/*.ts", "src/base/**/*.ts", "src/sharedProcess/**/*.ts"],
+  "compilerOptions": {
+    "composite": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "base/*": ["./src/base/*"],
+      "platform/*": ["./src/platform/*"],
+      "main/*": ["./src/main/*"],
+      "renderer/*": ["./src/renderer/*"],
+      "#preload": ["./src/preload/*"]
+    }
+  }
+}

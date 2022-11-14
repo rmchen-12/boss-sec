@@ -1,0 +1,15 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+  "include": ["electron.vite.config.*", "types/**/*.d.ts", "src/main/**/*.ts", "src/preload/**/*.ts", "src/platform/**/*.ts", "src/base/**/*.ts", "src/sharedProcess/**/*.ts"],
+  "compilerOptions": {
+    "composite": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "base/*": ["./src/base/*"],
+      "platform/*": ["./src/platform/*"],
+      "main/*": ["./src/main/*"],
+      "renderer/*": ["./src/renderer/*"],
+      "#preload": ["./src/preload/*"]
+    }
+  }
+}
